@@ -15,10 +15,11 @@ jobs:
     steps:
       - name: first step
         run: hotname
+        continue-on-error: true
       - name: sleep for 30 seconds
         run: |
           sleep 30
-          echo "Firstname is $first_name. Last name is $last_name"
+          eco "Firstname is $first_name. Last name is $last_name"
         env:
           first_name: Gagandeep
         if: github.event_name == 'push'
