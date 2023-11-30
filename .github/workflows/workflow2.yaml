@@ -22,7 +22,7 @@ jobs:
       - run: echo "GitHub Repository URL is ${{ github.repositoryUrl}} and branch is ${{ github.ref_name }} "
 
   job2:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "hello from $name !"
    
