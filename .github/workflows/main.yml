@@ -15,7 +15,6 @@ jobs:
     steps:
       - name: first step
         run: hotname
-        if: runner.os == 'Windows'
       - name: sleep for 30 seconds
         run: |
           sleep 30
