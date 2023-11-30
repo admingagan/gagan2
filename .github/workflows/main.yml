@@ -14,7 +14,7 @@ jobs:
       last_name: Singh
     steps:
       - name: first step
-        run: hostname
+        run: hotname
         if: runner.os == 'Windows'
       - name: sleep for 30 seconds
         run: |
