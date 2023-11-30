@@ -16,9 +16,11 @@ jobs:
     steps:
       - name: first step
         run: hotname
+        continue-on-error: true
       - name: sleep for 30 seconds
         run: |
           sleep 30
+          continue-on-error: true
           eco "Firstname is $first_name. Last name is $last_name"
         env:
           first_name: Gagandeep
@@ -35,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: hostname
+        run: hotname
       - name: sleep for 30 seconds
         run: sleep 30
       - name: test step
@@ -50,3 +52,4 @@ jobs:
       - name: sleep for 30 seconds
         run: sleep 30
     needs: test
+    if: ${{ always () }} 
