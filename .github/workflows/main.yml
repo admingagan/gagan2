@@ -10,12 +10,12 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    continue-on-error: true
     env:
       last_name: Singh
     steps:
       - name: first step
         run: hotname
-        continue-on-error: true
       - name: sleep for 30 seconds
         run: |
           sleep 30
