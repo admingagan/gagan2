@@ -12,4 +12,4 @@ jobs:
       - name: Run Playbook
         run: sudo ansible-playbook -vv web.yaml
       - name: run deployment with kubernetes
-        run: sudo kubectl apply -f deploy.yaml
+        run: kubectl apply -f deploy.yaml
