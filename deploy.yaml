@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gagan-app-deployment
+  labels:
+    app: gdapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gdapp
+  template:
+    metadata:
+      labels:
+        app: gdapp
+    spec:
+      containers:
+      - name: gdcontainer
+        image: gagandeepgawri/intel:v1
+        ports:
+        - containerPort: 80
